@@ -15,12 +15,41 @@ class generateParentheses
 public:
 	generateParentheses() { }
 	~generateParentheses() { }
+	void solve(int n,int leftNum,int rightNum,string s);
 	vector<string> solution(int n);
 private:
 	vector<string> res;
 };
 
+void generateParentheses::solve(int n,int leftNum,int rightNum,string s)
+{
+	if(leftNum < rightNum)
+		return;
+	if(leftNum + rightNum == 2*n)
+	{
+		if(leftNum == rightNum)
+		{
+			res.push_back(s);
+		}
+		return;
+	}
+	solve(n, leftNum+1, rightNum, s+"(");
+	solve(n, leftNum, rightNum+1, s+")");
+}
+
 vector<string> generateParentheses::solution(int n)
 {
-	
+	res.clear();
+	solve(n, 0, 0, "");
+	return res;
+}
+
+int main(int argc, char const *argv[])
+{
+	generateParentheses g;
+	vector<string> res = g.solution(3);
+	for(int i=0;i<res.size();i++)
+		cout<<res[i]<<"\t";
+	cout<<endl;
+	return 0;
 }

@@ -61,6 +61,7 @@ int implement_strStr::solution(char *haystack,char *needle)
 			j = next[j];
 		}
 	}
+	delete [] next;
 	if(j == nlen)
 		return i-nlen;
 	else

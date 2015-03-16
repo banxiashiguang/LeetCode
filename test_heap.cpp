@@ -32,5 +32,13 @@ int main(int argc, char const *argv[])
 	sort_heap(tmp.begin(),tmp.end());//将一个堆做排序,最终成为一个有序的系列，可以看到sort_heap时，
 					   //必须先是一个堆（两个特性：1、最大元素在第一个 2、添加或者删除元素以对数时间），因此必须先做一次make_heap.
 	printHeap(tmp);
+	int i = 0,j = -1;
+	if(j == -1)
+	{
+		++i;
+		++j;
+	}else{
+		cout<<"j="<<j<<endl;
+	}
 	return 0;
 }
