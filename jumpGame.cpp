@@ -11,16 +11,15 @@ public:
 
 bool jumpGame::solution(int A[],int n)
 {
-	if(A==NULL || n==0)
+	if(A == NULL || n == 1)
 		return true;
-	int reach = 0;
-	for (int i = 0; i <= reach && reach < n; ++i)
+	int maxIndex = 0;
+	for (int i = 0; i <= maxIndex && maxIndex < n-1; ++i)
 	{
-		reach = max(A[i]+i,reach);
+		if(i+A[i]>maxIndex)
+			maxIndex = i+A[i];
 	}
-	if(reach < n-1)
-		return false;
-	return true;
+	return maxIndex >= n-1;
 }
 
 int main(int argc, char const *argv[])
