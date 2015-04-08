@@ -58,6 +58,6 @@ int main(int argc, const char *argv[])
 {
 	vector<vector<int> > obstacleGrid{{0,0},{0,1}};
 	uniquePathWithObstacle u;
-	u.solution(obstacleGrid);
+	cout << u.solution(obstacleGrid) << endl;
 	return 0;
 }
