@@ -32,6 +32,18 @@ int Sqrt::solution(int x)
 			right = mid - 1;
 	}
 }
+int sqrtJ(int x) {
+	long ans = 0;
+	long base = 1L << 16;
+	while (base) {
+		ans |= base;
+		if (ans * ans > x)
+			ans ^= base;
+		base >>= 1;
+	}
+	return ans;
+
+}
 
 int main(int argc, char const *argv[])
 {

@@ -1,6 +1,5 @@
 #include "sort.h"
 
-
 void swap(int A[],int a,int b)
 {
 	int tmp = A[a];
