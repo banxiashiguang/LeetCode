@@ -15,9 +15,9 @@ void solution(int A[],int n)
 	}
 }
 
-int main(int argc,const char argv[])
+int main(int argc,const char *argv[])
 {
-	int A[] = {1,4,2,6,9,8,1,5};
+	int A[] = {4,2,6,9,8,1,1,5};
 	int n = sizeof(A)/sizeof(A[0]);
 	solution(A, n);
 	for (int i = 0; i < n; ++i)
