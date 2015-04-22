@@ -100,7 +100,7 @@ void printArray(int A[],int n)
 
 int main(int argc, char const *argv[])
 {
-	int A[]  = {5,1,3,2,4,6,9,7,8};
+	int A[]  = {5,1,3,2,4,6,9,7,1,18,9};
 	int n = sizeof(A)/sizeof(A[0]);
 	max_heap h(A,n);
 	for(int i=0;i<n-1;i++)
