@@ -16,8 +16,8 @@
 ##前一个包含所有t字符的s的一个子串，如何滑到后一个包含t所有字符的s的子串
 while(left < right)  
 {  
-	int tmp = (int)s[left];  
-	if(candidate[tmp] > need[tmp])  
-		candidate[tmp]--;  
-		left++;  
+    int tmp = (int)s[left];  
+    if(candidate[tmp] > need[tmp])  
+        candidate[tmp]--;  
+        left++;  
 }  
