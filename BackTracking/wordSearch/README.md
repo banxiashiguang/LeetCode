@@ -8,5 +8,5 @@
 递归的具体过程如下：  
 1、递归的出口：i >= board.size() || j >= board[i].size() || i < 0 || j < 0 || tmp[i,j] == '#' || tmp[i,j] != word[size]。  
 2、如果，搜过过程中size == word.size()-1，已经匹配到最后一个字符，并且已经步骤1之后，最后一个也匹配成功，那么 return true。否则，进行以下步骤。  
-3、保存当前board[i,j](char t),标记board[i,j]已经使用过(#),匹配word的下一个字符(++size),水平或者垂直匹配。search(tmp,i+1,j,word,size) || search(tmp,i-1,j,word,size) || search(tmp,i,j-1,word,size) || search(tmp,i,j+1,word,size)。如果匹配成功，那么返回true。否则  
-4、恢复board[i,j](t),本次匹配失败，return false。
+3、利用变量保存当前board[i,j],标记board[i,j]已经使用过(#),匹配word的下一个字符(++size),水平或者垂直匹配。search(tmp,i+1,j,word,size) || search(tmp,i-1,j,word,size) || search(tmp,i,j-1,word,size) || search(tmp,i,j+1,word,size)。如果匹配成功，那么返回true。否则  
+4、利用变量恢复board[i,j],本次匹配失败，return false。
